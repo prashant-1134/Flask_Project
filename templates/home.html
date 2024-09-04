@@ -11,30 +11,35 @@
             height: 250px;
             object-fit: cover;
             margin: 0 auto;
-        }
-        #submit{
-    
+            margin-bottom: 16px;
         }
     </style>
 </head>
 <body>
+    {% include 'nav.html'%}
+    <img class="img-fluid" id="banner" src="static/banner.jpg" alt="not open">
+
     <div class="container">
-        <h1 class="text-center mt-4 mb-4 text-body-tertiary">Prashant Careers</h1>
-        <img class="img-fluid" id="banner" src="static/banner.jpg" alt="not open">
-        <h2 class="text-center mt-2 mb-4 text-body-tertiary">About Prashant </h2>
-        <p class="lead mt-2 mb-4 text-body-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <h2 class="text-center mt-2 mb-4 text-body-tertiary">Job Openings</h2>
+        <h1 class="text-center mt-4 mb-4 text-body-tertiary" id="Home">Prashant Careers</h1>
+        <div class="row" style="margin-bottom: 16px;">
+            <div class="col-md-6" style="margin-right: 10px;">
+            <p class="lead mt-2 mb-4 text-body-tertiary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <div class="d-none d-md-block col-md-6">
+            <img  src="/static/people.jpg" alt="not open" height="230px" width="500px" style="border: 4px;">
+            </div>
+        </div>
+        <h2 class="text-center mt-2 mb-4 text-body-tertiary" id="JobOpening">Job Openings</h2>
         <P><div>
             {% for job in jobs%}
             {% include'jobItem.html'%}
             {% endfor %}
         </div></P>
         <div class="text-center">
-            <button class="btn btn-primary btn-lg" id="submit">Contact Us</button>
-            <p class="lead mt-2 mb-4 text-body-tertiary">Copyright 2024, Prashant</p>
+            <a href="mailto: prashantapplogin@gmail.com?subject=contacting from site " class="btn btn-primary btn-lg" id="submit">Contact Us</a>
         </div>
         
     </div>
-    
+    {% include 'footer.html' %}
 </body>
 </html>

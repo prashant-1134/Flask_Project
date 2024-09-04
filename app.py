@@ -31,4 +31,4 @@ def list_jobs():
     return jsonify(JOB)
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
